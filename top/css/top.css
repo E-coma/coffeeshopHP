@@ -1,9 +1,16 @@
 @charset "utf-8";
 
+body {
+    font-family: 'Calibri', Arial,sans-serif;
+    color: #333333;
+}
 #main {
     max-width: 1980px;
     margin: 0 auto;
 }
+
+/* Vegas2(?)を使って背景画像スライドショーの設定 */
+
 .Vegas {
     position: relative;
     width: 100%;
@@ -21,9 +28,40 @@
     color: #fff;
     font-size: 150%;
   }
+/* 右固定のナビゲーション */
 
+#header nav {
+    position: fixed;
+    top: 3%;
+    right: 2%;
+    color: #fff;
+    font-size: 120%;
+    font-weight: 500;
+    z-index: 4;
+}
 
+#header nav ul {
+    list-style-type: none;
+    text-align: left;
+}
 
+#header nav li {
+    padding: 10px;
+    margin: 10px;
+    transition: all 0.5s;
+}
+
+#header ul a {
+    text-decoration: none;
+    color: #fff;
+}
+#header ul a.change-color {
+    color: #333333;
+  }
+
+#header li:hover {
+    transform: translate(10px,0);
+}
 /*スクロールダウン全体の場所*/
 .scrolldown{
 	position:absolute;
@@ -35,14 +73,14 @@
 	animation: arrowmove 1s ease-in-out infinite;
 }
 
-/*下からの距離が変化して全体が下→上→下に動く*/
+/*下から下→上→下*/
 @keyframes arrowmove{
       0%{bottom:1%;}
       50%{bottom:3%;}
      100%{bottom:1%;}
  }
 
-/*Scrollテキストの描写*/
+/*Scrollテキスト*/
 .scrolldown span{
     position: absolute;
     left: 0.6vw;
@@ -53,10 +91,9 @@
     -ms-writing-mode: tb-rl;
     -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
-    z-index: 1000;
 }
 
-/* 矢印の描写 */
+/* 矢印 */
 .scrolldown:before {
     content: "";
     position: absolute;
@@ -65,7 +102,6 @@
     width: 0.1rem;
     height: 1.2rem;
     background: #fff;
-    z-index: 10000;
     transform: skewX(-136deg);
 }
 
@@ -78,6 +114,12 @@
     width: 0.02rem;
     height: 4rem;
     background: #eee;
-    z-index: 10000;
 }
   
+/* ファーストビュー以下 */
+
+article {
+    z-index: 2;
+    width: auto;
+    height: 100000px;
+}
