@@ -1,20 +1,7 @@
-function slideSwitch() {
-    var $active = $('.slide img.active');
- 
-    if ( $active.length == 0 ) $active = $('.slide img:last');
- 
-    var $next =  $active.next().length ? $active.next()
-       : $('.slide img:first');
- 
-    $active.addClass('last-active');
- 
-    $next.css({opacity: 0.0})
-       .addClass('active')
-       .animate({opacity: 1.0}, 1000, function() {
-            $active.removeClass('active last-active');
-       });
- }
- 
- $(function() {
-    setInterval( "slideSwitch()", 5000 );
- });
+$(".JS_VegasItem").vegas({ // スライドショーにしたい要素指定
+    slides: [
+        { src: "common/img/top-img1.jpg" }, // 背景画像1枚目
+        { src: "common/img/top-img2.jpg" }, // 背景画像2枚目
+        { src: "common/img/top-img3.jpg" } // 背景画像3枚目
+    ]
+  });
