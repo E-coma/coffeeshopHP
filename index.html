@@ -16,30 +16,57 @@
 </head>
 
 <body>
-    <div class="Vegas JS_VegasItem">
+    <div class="Vegas JS_VegasItem" id="top-img">
         <div class="Vegas-Inner">
             <div class="Vegas-Inner-Item">
-                <h1>coffee and sandwich</h1>
+                <h1 id="pctitle">coffee and sandwich</h1>
+                <h1 id="sptitle">coffee<br>
+                    and<br>
+                    sandwich</h1>
             </div>
         </div>
-        <div class="scrolldown"><span>Scroll</span></div>
+        <a href="#concept"><div class="scrolldown"><span>Scroll</span></div></a>
     </div>
     <article>
         <div id="header">
-            <nav>
+            <a class="ScrollTop" href="#top"><img src="common/img/logo-img.png" width="93" alt=""></a>
+            <nav id="header-nav">
                 <ul>
-                    <a href=""><li>concept</li></a>
-                    <a href=""><li>menu</li></a>
-                    <a href=""><li>access</li></a>
-                    <a href=""><li>schedule</li></a>
-                    <a href=""><li>contact us</li></a>
+                    <a href="#concept-title">
+                        <li>concept</li>
+                    </a>
+                    <a href="">
+                        <li>menu</li>
+                    </a>
+                    <a href="">
+                        <li>access</li>
+                    </a>
+                    <a href="">
+                        <li>schedule</li>
+                    </a>
+                    <a href="">
+                        <li>contact us</li>
+                    </a>
                 </ul>
             </nav>
         </div>
     </article>
-    <!-- <footer>
-            <img src="common/img/footer-logo.png" width="104">
-        </footer> -->
+    <article>
+        <section id="concept">
+            <div class="subtitle">
+                <h2 id="concept-title">CONCEPT</h2>
+            </div>
+            <div id="concept-text">
+                <p>岐阜県の日ノ出町通りで静かに営むコーヒースタンド。</p>
+                <p>一杯ずつ丁寧に淹れるドリップコーヒーと</p>
+                <p>サンドイッチをご用意しております。</p>
+            </div>
+        </section>
+    </article>
+    <footer>
+        <img src="common/img/footer-logo.png" width="104">
+    </footer>
+
     <script type="text/javascript" src="vegas/vegas.min.js"></script>
     <script src="js/pagetop.js" defer></script>
 </body>

@@ -1,9 +1,10 @@
 @charset "utf-8";
 
 body {
-    font-family: 'Calibri', Arial,sans-serif;
+    font-family: Calibri, Arial, sans-serif;
     color: #333333;
 }
+
 #main {
     max-width: 1980px;
     margin: 0 auto;
@@ -16,6 +17,7 @@ body {
     width: 100%;
     height: 100vh;
 }
+
 .Vegas-Inner {
     position: absolute;
     width: auto;
@@ -23,11 +25,36 @@ body {
     top: 50%;
     left: 8%;
     transform: translate(3%, -36%);
-  }
-  .Vegas-Inner-Item {
+}
+
+.Vegas-Inner-Item {
     color: #fff;
     font-size: 150%;
-  }
+}
+
+#sptitle {
+    display: none;
+}
+
+/* 左固定のロゴ */
+
+.ScrollTop {
+    position: fixed;
+    top: 3%;
+    left: 2%;
+    width: 93px;
+    z-index: 4;
+    opacity: 0;
+    padding: 10px;
+    margin: 10px;
+}
+
+.ScrollTop.isActive {
+    z-index: 4;
+    opacity: 1;
+    transition: all 0.65s;
+}
+
 /* 右固定のナビゲーション */
 
 #header nav {
@@ -36,7 +63,7 @@ body {
     right: 2%;
     color: #fff;
     font-size: 120%;
-    font-weight: 500;
+    font-weight: bold;
     z-index: 4;
 }
 
@@ -55,33 +82,43 @@ body {
     text-decoration: none;
     color: #fff;
 }
+
 #header ul a.change-color {
-    color: #333333;
-  }
+    color: #333;
+}
 
 #header li:hover {
-    transform: translate(10px,0);
+    transform: translate(10px, 0);
 }
+
 /*スクロールダウン全体の場所*/
-.scrolldown{
-	position:absolute;
+.scrolldown {
+    position: absolute;
     z-index: 10000;
     bottom: 0;
     left: 50%;
 
     /*矢印の動き1秒かけて永遠にループ*/
-	animation: arrowmove 1s ease-in-out infinite;
+    animation: arrowmove 1s ease-in-out infinite;
 }
 
 /*下から下→上→下*/
-@keyframes arrowmove{
-      0%{bottom:1%;}
-      50%{bottom:3%;}
-     100%{bottom:1%;}
- }
+@keyframes arrowmove {
+    0% {
+        bottom: 1%;
+    }
+
+    50% {
+        bottom: 3%;
+    }
+
+    100% {
+        bottom: 1%;
+    }
+}
 
 /*Scrollテキスト*/
-.scrolldown span{
+.scrolldown span {
     position: absolute;
     left: 0.6vw;
     bottom: 1vw;
@@ -106,7 +143,7 @@ body {
 }
 
 
-.scrolldown:after{
+.scrolldown:after {
     content: "";
     position: absolute;
     bottom: 1vw;
@@ -115,11 +152,83 @@ body {
     height: 4rem;
     background: #eee;
 }
-  
+
 /* ファーストビュー以下 */
 
 article {
     z-index: 2;
     width: auto;
-    height: 100000px;
+}
+
+#concept {
+    width: auto;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 170px;
+    height: 1000px;
+    text-align: center;
+}
+
+/* コンセプトとかのサブタイトルまとめた設定 */
+.subtitle h2 {
+    display: inline-block;
+    font-size: 200%;
+    margin: 0;
+    padding: 5px;
+    border-bottom: 3px solid #333;
+    font-weight: bold;
+}
+
+#concept-text p {
+    font-family: '游ゴシック';
+    font-size: 100%;
+    font-weight: bold;
+}
+
+#concept-text {
+    opacity: 0;
+    margin-top: 50px;
+    transition: 1s;
+    transform: translateY(50px);
+
+}
+
+#concept-text.isUp {
+    opacity: 2;
+    transform: translateY(0);
+}
+
+/* レスポンシブ */
+
+/* スマホ */
+@media screen and (max-width:480px) {
+    #pctitle {
+        display: none;
+    }
+
+    #sptitle {
+        display: block;
+    }
+
+    .Vegas-Inner-Item {
+        text-align: center;
+        text-shadow: 1.5px 1px 6px #333;
+    }
+
+    .Vegas-Inner {
+        position: absolute;
+        width: auto;
+        margin: 0 1px;
+        top: 40%;
+        left: 25%;
+        transform: translate(3%, -36%);
+    }
+
+    #header nav {
+        display: none;
+    }
+
+    .ScrollTop {
+        display: none;
+    }
 }
