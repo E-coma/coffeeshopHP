@@ -163,26 +163,30 @@ article {
 #concept {
     width: auto;
     max-width: 1280px;
-    margin: 0 auto;
-    margin-top: 170px;
-    height: 1000px;
+    margin: 170px auto 170px auto;
     text-align: center;
 }
 
 /* コンセプトとかのサブタイトルまとめた設定 */
 .subtitle h2 {
     display: inline-block;
-    font-size: 200%;
+    font-size: 250%;
     margin: 0;
     padding: 5px;
     border-bottom: 3px solid #333;
     font-weight: bold;
 }
 
-#concept-text p {
+/* コンセプトのテキスト設定 */
+
+#text {
     font-family: '游ゴシック';
-    font-size: 100%;
+    font-size: 120%;
     font-weight: bold;
+}
+
+#concept-text p:nth-child(3) {
+    padding-bottom: 5px;
 }
 
 #concept-text {
@@ -193,9 +197,137 @@ article {
 
 }
 
+/* コンセプトを下から上に表示するためのプラスisUp */
 #concept-text.isUp {
     opacity: 2;
     transform: translateY(0);
+}
+
+/* メニュー */
+
+#menu {
+    width: auto;
+    max-width: 1280px;
+    margin: 170px auto 170px auto;
+    text-align: center;
+}
+
+#menu-text1 {
+    margin: inherit;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(50px);
+}
+
+#menu-text1.isUp {
+    opacity: 2;
+    transform: translateY(0);
+}
+
+#menu-text2 {
+    margin: inherit;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(50px);
+}
+
+#menu-text2.isUp {
+    opacity: 2;
+    transform: translateY(0);
+}
+#menu-comment1 {
+    font-family: '游ゴシック';
+    font-size: 100%;
+    font-weight: bold;
+}
+
+#menu-comment2 {
+    font-family: '游ゴシック';
+    font-size: 100%;
+    font-weight: bold;
+}
+
+#smallTitle1 {
+    font-size: 160%;
+}
+#smallTitle2 {
+    font-size: 160%;
+}
+#coffee-menu {
+    margin: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#sandwich-menu {
+    margin: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#coffee-img {
+    text-align: left;
+}
+#sandwich-img {
+    text-align: right;
+}
+figure {
+    font-family: '游ゴシック';
+    font-weight: bold;
+    font-size: 80%;
+}
+
+button {
+    margin: 20px;
+}
+
+.custom-btn {
+    padding: 5px 53px;
+    color: #fff;
+    letter-spacing: 1px;
+    background: transparent;
+    outline: none !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.moreBtn {
+    background-color: #efba24;
+    border: none;
+    border-bottom: 2px solid #333;
+    border-left: 2px solid #333;
+}
+
+.moreBtn:before,
+.moreBtn:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    top: 0;
+    background: #333;
+    transition: all 0.3s ease;
+}
+
+.moreBtn:before {
+    height: 0%;
+    width: 2px;
+}
+
+.moreBtn:after {
+    width: 0%;
+    height: 2px;
+}
+
+.moreBtn:hover:before {
+    height: 100%;
+}
+
+.moreBtn:hover:after {
+    width: 100%;
 }
 
 /* レスポンシブ */
