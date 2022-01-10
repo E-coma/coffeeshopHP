@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+html {
+    font-size: 75%;
+}
+
 body {
     font-family: Calibri, Arial, sans-serif;
     color: #333333;
@@ -29,19 +33,28 @@ body {
 
 .Vegas-Inner-Item {
     color: #fff;
-    font-size: 150%;
+    font-size: 2rem;
 }
 
 #sptitle {
     display: none;
 }
 
+/* ヘッダー全体　上に固定 */
+
+#header {
+    position: fixed;
+    top: 3%;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 99999;
+}
+
 /* 左固定のロゴ */
 
 .ScrollTop {
-    position: fixed;
+    float: left;
     top: 3%;
-    left: 2%;
     width: 93px;
     z-index: 4;
     opacity: 0;
@@ -58,11 +71,11 @@ body {
 /* 右固定のナビゲーション */
 
 #header nav {
-    position: fixed;
+    float: right;
     top: 3%;
     right: 2%;
     color: #fff;
-    font-size: 120%;
+    font-size: 1.4rem;
     font-weight: bold;
     z-index: 4;
 }
@@ -70,6 +83,7 @@ body {
 #header nav ul {
     list-style-type: none;
     text-align: left;
+    padding: 0;
 }
 
 #header nav li {
@@ -165,12 +179,13 @@ article {
     max-width: 1280px;
     margin: 170px auto 170px auto;
     text-align: center;
+    padding: 0 170px;
 }
 
 /* コンセプトとかのサブタイトルまとめた設定 */
 .subtitle h2 {
     display: inline-block;
-    font-size: 250%;
+    font-size: 2.8rem;
     margin: 0;
     padding: 5px;
     border-bottom: 3px solid #333;
@@ -181,7 +196,7 @@ article {
 
 #text {
     font-family: '游ゴシック';
-    font-size: 120%;
+    font-size: 1.3rem;
     font-weight: bold;
 }
 
@@ -214,87 +229,142 @@ article {
     max-width: 1280px;
     margin: 170px auto 170px auto;
     text-align: center;
+    padding: 0 170px;
 }
 
 #menu p {
-    margin: 4px;
+    margin: 4px 0;
 }
-#menu-text1 {
-    margin: inherit;
+
+.menuWrup {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.menuWrup:not(:last-child) {
+    margin-bottom: 80px;
+}
+
+.menuWrup:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.menuWrup img {
+    display: block;
+    height: auto;
+    max-width: 414px;
+    min-width: 420px;
+}
+
+.menu-textbox {
+    margin-left: 30px;
+    width: 48%;
+}
+
+#text1, #text2 {
     opacity: 0;
     transition: 1s;
     transform: translateY(50px);
 }
 
+#text1.isUp {
+    opacity: 2;
+    transform: translateY(0);
+}
+
+#text2.isUp {
+    opacity: 2;
+    transform: translateY(0);
+}
+
+
+/* #menu-text1 {
+    margin-left: 30px;
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(50px);
+    width: 36%;
+} */
+/* 
 #menu-text1.isUp {
     opacity: 2;
     transform: translateY(0);
-}
+} */
 
-#menu-text2 {
-    margin: inherit;
+/* #menu-text2 {
+    width: 412.06px;
     opacity: 0;
     transition: 1s;
     transform: translateY(50px);
-}
-
-#menu-text2.isUp {
-    opacity: 2;
-    transform: translateY(0);
-}
+    width: 40%;
+} */
 
 #menu-comment1 {
     font-family: '游ゴシック';
-    font-size: 100%;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
 #menu-comment2 {
     font-family: '游ゴシック';
-    font-size: 100%;
+    font-size: 1.1rem;
     font-weight: bold;
 }
 
 #smallTitle1 {
-    font-size: 160%;
+    font-size: 2rem;
     margin: 20px 0 50px 0;
 }
 
 #smallTitle2 {
-    font-size: 160%;
+    font-size: 2rem;
     margin: 20px 0 50px 0;
 }
 
+/* 
 #coffee-menu {
-    margin: 50px;
+    margin: 50px 0;
     display: flex;
-    justify-content: space-around;
+    gap: 0 100px;
+    justify-content: center;
     align-items: center;
 }
 
 #sandwich-menu {
-    margin: 50px;
+    margin: 50px 0;
     display: flex;
-    justify-content: space-around;
+    gap: 0 116px;
+    justify-content: center;
     align-items: center;
 }
-
-#coffee-img {
-    text-align: left;
+#sandwich-img img {
+    width: 100%;
 }
 
-#sandwich-img {
-    text-align: right;
-}
-
+#coffee-img img {
+    width: 100%;
+} */
 figure {
     font-family: '游ゴシック';
     font-weight: bold;
     font-size: 80%;
+    margin: 0;
+    min-width: 370px
+}
+
+figcaption#fgcoffee {
+    text-align: left;
+}
+
+figcaption#fgsand {
+    text-align: right;
 }
 
 button {
-   margin: 50px 0 20px 0;
+    margin: 50px 0 20px 0;
 }
 
 .custom-btn {
@@ -349,19 +419,23 @@ button {
 #access {
     width: auto;
     color: #fff;
-    max-width: 1280px;
+    max-width: 1020px;
     margin: 170px auto 170px auto;
+    padding: 0 170px;
     text-align: center;
-    background-color: #333;
+    background: linear-gradient(to right, #fff 0%, #fff 13.6%, #333 13.6%, #333 86.4%, #fff 86.4%, #fff 100%);
     padding-bottom: 80px;
+    margin: 0 auto;
 }
 
 #access-title {
+    display: inline-block;
     border-bottom: 2px solid #fff;
     padding-top: 50px;
 }
 
 #accesstext {
+    display: inline-block;
     text-align: left;
     font-family: '游ゴシック';
     font-size: 100%;
@@ -370,6 +444,7 @@ button {
     opacity: 0;
     transition: 1s;
     transform: translateY(50px);
+    width: 36%;
 }
 
 #asCaption {
@@ -379,13 +454,23 @@ button {
     border-bottom: 1px solid #fff;
 }
 
-#asSub {
-    margin: 1.5px 20px;
+iframe {
+    display: inline-block;
+    width: 40%;
 }
+
+#asSub {
+    display: inline-block;
+    margin: 1.5px 20px;
+    width: 100%;
+}
+
 #accesstext.isUp {
+    display: inline-block;
     opacity: 2;
     transform: translateY(0);
 }
+
 /* スケジュール */
 
 #schedule {
@@ -393,10 +478,16 @@ button {
     max-width: 1280px;
     margin: 170px auto 170px auto;
     text-align: center;
+    padding: 0 170px;
+}
+
+#schedule img {
+    width: 100%;
 }
 
 #scheduleText {
     margin: 50px;
+    text-align: center;
 }
 
 #schedule-comment {
@@ -405,10 +496,19 @@ button {
 }
 
 
+
 /* レスポンシブ */
+html {
+    font-size: 87.5%;
+}
 
 /* スマホ */
 @media screen and (max-width:480px) {
+
+    html {
+        font-size: 100%;
+    }
+
     #pctitle {
         display: none;
     }
@@ -429,6 +529,10 @@ button {
         top: 40%;
         left: 25%;
         transform: translate(3%, -36%);
+    }
+
+    #header {
+        display: none;
     }
 
     #header nav {

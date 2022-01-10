@@ -54,9 +54,9 @@ $(window).on('scroll', function () {
     windowBottom = $(window).scrollTop() + $(window).height()
     windowTop = $(window).scrollTop()
     if (windowBottom > menu1Up && windowTop < menu1Up + document.getElementById("sandwich-menu").offsetHeight + document.getElementById("sandwich-menu").offsetHeight + textMargin + contentsMarginTop) {
-        $('#menu-text1').addClass('isUp');
+        $('#text1').addClass('isUp');
     } else {
-        $('#menu-text1').removeClass('isUp');
+        $('#text1').removeClass('isUp');
     }
 });
 
@@ -65,9 +65,9 @@ $(window).on('scroll', function () {
     windowBottom = $(window).scrollTop() + $(window).height()
     windowTop = $(window).scrollTop()
     if (windowBottom > menu2Up && windowTop < menu2Up + contentsMarginTop + textMargin + document.getElementById("access").offsetHeight) {
-        $('#menu-text2').addClass('isUp');
+        $('#text2').addClass('isUp');
     } else {
-        $('#menu-text2').removeClass('isUp');
+        $('#text2').removeClass('isUp');
     }
 });
 let menu3Up = menu2Up + 170 * 2 + textMargin * 2 + document.getElementById("sandwich-menu").offsetHeight
