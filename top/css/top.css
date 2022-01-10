@@ -229,7 +229,7 @@ article {
     max-width: 1280px;
     margin: 170px auto 170px auto;
     text-align: center;
-    padding: 0 170px;
+    padding: 0 103px;
 }
 
 #menu p {
@@ -238,7 +238,7 @@ article {
 
 .menuWrup {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
     margin-top: 50px;
@@ -259,15 +259,25 @@ article {
     min-width: 420px;
 }
 
-.menu-textbox {
-    margin-left: 30px;
-    width: 48%;
+.menu-textbox1 {
+    text-align: right;
+    width: 100%;
+    max-width: 420px;
+    min-width: 340px;
 }
 
+.menu-textbox2{ 
+
+    text-align: left;
+    width: 100%;
+    max-width: 420px;
+    min-width: 340px;
+}
 #text1, #text2 {
     opacity: 0;
     transition: 1s;
     transform: translateY(50px);
+    text-align: center;
 }
 
 #text1.isUp {
