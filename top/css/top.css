@@ -26,14 +26,15 @@ body {
     position: absolute;
     width: auto;
     margin: 0 1px;
-    top: 50%;
-    left: 8%;
+    top: 55%;
+    left: 2%;
     transform: translate(3%, -36%);
 }
 
 .Vegas-Inner-Item {
     color: #fff;
     font-size: 2rem;
+    text-shadow: 1.5px 1px 6px #333;
 }
 
 #sptitle {
@@ -55,7 +56,7 @@ body {
 .ScrollTop {
     float: left;
     top: 3%;
-    width: 93px;
+    width: 50px;
     z-index: 4;
     opacity: 0;
     padding: 10px;
@@ -110,7 +111,7 @@ body {
     position: absolute;
     z-index: 10000;
     bottom: 0;
-    left: 50%;
+    left: 52%;
 
     /*矢印の動き1秒かけて永遠にループ*/
     animation: arrowmove 1s ease-in-out infinite;
@@ -179,11 +180,11 @@ article {
     max-width: 1280px;
     margin: 170px auto 170px auto;
     text-align: center;
-    padding: 0 170px;
+    padding: 0 103px;
 }
 
 /* コンセプトとかのサブタイトルまとめた設定 */
-.subtitle h2 {
+#subtitle h2 {
     display: inline-block;
     font-size: 2.8rem;
     margin: 0;
@@ -225,156 +226,105 @@ article {
 /* メニュー */
 
 #menu {
-    width: auto;
-    max-width: 1280px;
-    margin: 170px auto 170px auto;
+    width: 100%;
+    max-width: 1980px;
+    margin: 0 auto;
     text-align: center;
-    padding: 0 103px;
 }
 
 #menu p {
     margin: 4px 0;
 }
 
-.menuWrup {
+.menubox {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
     margin-top: 50px;
 }
 
-.menuWrup:not(:last-child) {
+.menubox:not(:last-child) {
     margin-bottom: 80px;
-}
-
-.menuWrup:nth-child(even) {
     flex-direction: row-reverse;
 }
 
-.menuWrup img {
-    display: block;
+.menubox:nth-child(even) {
+    text-align: center;
+}
+
+.menubox:nth-child(odd) {
+    text-align: center;
+}
+
+#menuimg {
+    width: 40%;
+    min-width: 259px;
+    align-items: center;
+}
+
+#menu figure img {
+    width: 95%;
     height: auto;
-    max-width: 414px;
-    min-width: 420px;
+    max-width: 410px;
+    object-fit: cover;
+
 }
 
-.menu-textbox1 {
-    text-align: right;
-    width: 100%;
-    max-width: 420px;
-    min-width: 340px;
-}
-
-.menu-textbox2{ 
-
-    text-align: left;
-    width: 100%;
-    max-width: 420px;
-    min-width: 340px;
-}
-#text1, #text2 {
+.menu-textbox {
+    width: 40%;
     opacity: 0;
     transition: 1s;
     transform: translateY(50px);
     text-align: center;
+    font-family: '游ゴシック';
+    font-size: 1.1rem;
+    font-weight: bold;
 }
 
 #text1.isUp {
     opacity: 2;
     transform: translateY(0);
+    width: 40%;
 }
 
 #text2.isUp {
     opacity: 2;
     transform: translateY(0);
-}
-
-
-/* #menu-text1 {
-    margin-left: 30px;
-    opacity: 0;
-    transition: 1s;
-    transform: translateY(50px);
-    width: 36%;
-} */
-/* 
-#menu-text1.isUp {
-    opacity: 2;
-    transform: translateY(0);
-} */
-
-/* #menu-text2 {
-    width: 412.06px;
-    opacity: 0;
-    transition: 1s;
-    transform: translateY(50px);
     width: 40%;
-} */
-
-#menu-comment1 {
-    font-family: '游ゴシック';
-    font-size: 1.1rem;
-    font-weight: bold;
 }
 
-#menu-comment2 {
-    font-family: '游ゴシック';
-    font-size: 1.1rem;
-    font-weight: bold;
-}
 
-#smallTitle1 {
+#smallTitle {
     font-size: 2rem;
-    margin: 20px 0 50px 0;
+    margin: 0% 0 10px 0;
+    display: inline-block;
 }
 
-#smallTitle2 {
-    font-size: 2rem;
-    margin: 20px 0 50px 0;
+
+#smallTitle.tl-title {
+    display: none;
 }
 
-/* 
-#coffee-menu {
-    margin: 50px 0;
-    display: flex;
-    gap: 0 100px;
-    justify-content: center;
-    align-items: center;
+#smallTitle.tl-title {
+    display: none;
 }
 
-#sandwich-menu {
-    margin: 50px 0;
-    display: flex;
-    gap: 0 116px;
-    justify-content: center;
-    align-items: center;
-}
-#sandwich-img img {
-    width: 100%;
-}
-
-#coffee-img img {
-    width: 100%;
-} */
-figure {
-    font-family: '游ゴシック';
-    font-weight: bold;
-    font-size: 80%;
+#menu figure {
     margin: 0;
-    min-width: 370px
+    display: inline;
+
 }
 
-figcaption#fgcoffee {
-    text-align: left;
-}
-
-figcaption#fgsand {
-    text-align: right;
+figcaption {
+    font-family: '游ゴシック';
+    font-size: 1rem;
+    font-weight: bold;
 }
 
 button {
-    margin: 50px 0 20px 0;
+    margin: 7% 0px 3% 0;
 }
 
 .custom-btn {
@@ -424,24 +374,34 @@ button {
     width: 100%;
 }
 
+/* スケジュール */
+.scheduleText {
+    margin: 0 auto;
+    width: auto;
+
+}
+
 /* アクセス */
 
 #access {
     width: auto;
     color: #fff;
-    max-width: 1020px;
+    max-width: 1290px;
     margin: 170px auto 170px auto;
-    padding: 0 170px;
+    padding: 0 103px;
     text-align: center;
-    background: linear-gradient(to right, #fff 0%, #fff 13.6%, #333 13.6%, #333 86.4%, #fff 86.4%, #fff 100%);
+    background: linear-gradient(to right, #fff 0%, #fff 14%, #333 14%, #333 86%, #fff 86%, #fff 100%);
     padding-bottom: 80px;
-    margin: 0 auto;
 }
 
 #access-title {
     display: inline-block;
-    border-bottom: 2px solid #fff;
+    border-bottom: 3px solid #fff!important;
     padding-top: 50px;
+}
+
+#access-textbox {
+    padding-top: 30px;
 }
 
 #accesstext {
@@ -455,6 +415,8 @@ button {
     transition: 1s;
     transform: translateY(50px);
     width: 36%;
+    padding-left: 30px;
+    vertical-align: top;
 }
 
 #asCaption {
@@ -467,6 +429,7 @@ button {
 iframe {
     display: inline-block;
     width: 40%;
+
 }
 
 #asSub {
@@ -488,7 +451,7 @@ iframe {
     max-width: 1280px;
     margin: 170px auto 170px auto;
     text-align: center;
-    padding: 0 170px;
+    padding: 0 103px;
 }
 
 #schedule img {
@@ -508,15 +471,93 @@ iframe {
 
 
 /* レスポンシブ */
+
 html {
     font-size: 87.5%;
 }
 
+/* タブレット */
+
+@media screen and (max-width:780px) {
+    html {
+        font-size: 86.2%;
+    }
+
+    #header {
+        display: none;
+    }
+
+    #concept {
+        padding: 0;
+    }
+
+    #accesstext {
+        text-align: left;
+        font-family: '游ゴシック';
+        font-size: 100%;
+        font-weight: bold;
+        opacity: 0;
+        transition: 1s;
+        transform: translateY(50px);
+        width: 67%;
+    }
+
+    iframe {
+        display: inline-block;
+        width: 70%;
+    }
+
+    #access #menu-textbox1 {
+        padding-top: 30px;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    iframe {
+        display: inline-block;
+        width: 90%;
+    }
+
+    #accesstext {
+        /* text-align: left; */
+        font-family: '游ゴシック';
+        font-size: 100%;
+        font-weight: bold;
+        margin: 5%;
+        opacity: 0;
+        transition: 1s;
+        transform: translateY(50px);
+        padding-left: 0;
+    }
+
+    #asSub {
+        display: initial;
+        margin: 1.5px 20px;
+        width: 100%;
+    }
+
+    #asCaption {
+        display: block;
+        margin: 1.5px 0;
+        font-size: large;
+        border-bottom: none;
+    }
+
+    #accesstext.isUp {
+        padding: none;
+        padding-left: 0;
+        display: inline-block;
+        opacity: 2;
+        transform: translateY(0);
+        width: 100%;
+    }
+}
+
 /* スマホ */
-@media screen and (max-width:480px) {
+@media screen and (max-width:520px) {
 
     html {
-        font-size: 100%;
+        font-size: 72%;
     }
 
     #pctitle {
@@ -529,20 +570,15 @@ html {
 
     .Vegas-Inner-Item {
         text-align: center;
+        margin: 0 auto;
         text-shadow: 1.5px 1px 6px #333;
     }
 
     .Vegas-Inner {
         position: absolute;
-        width: auto;
-        margin: 0 1px;
-        top: 40%;
-        left: 25%;
+        width: 100%;
+        margin: 0 auto;
         transform: translate(3%, -36%);
-    }
-
-    #header {
-        display: none;
     }
 
     #header nav {
@@ -551,5 +587,56 @@ html {
 
     .ScrollTop {
         display: none;
+    }
+
+
+    #smallTitle.tl-title {
+        display: block;
+        margin-top: 80px;
+    }
+
+    #smallTitle {
+        display: none;
+    }
+
+    .menubox {
+        flex-direction: column-reverse;
+        margin-top: 20px;
+    }
+
+    .menubox:not(:last-child) {
+        margin-bottom: 80px;
+        flex-direction: column-reverse;
+    }
+
+
+    .menu-textbox {
+        padding-top: 30px;
+        opacity: 0;
+        transition: 1s;
+        transform: translateY(50px);
+    }
+
+    #text1.isUp {
+        opacity: 2;
+        transform: translateY(0);
+        width: 100%;
+    }
+
+    #text2.isUp {
+        opacity: 2;
+        transform: translateY(0);
+        width: 100%;
+    }
+    #access {
+        width: auto;
+        color: #fff;
+        max-width: 1980px;
+        padding: 0;
+        text-align: center;
+        background: #333;
+        padding-bottom: 80px;
+        margin: 0 auto;
+        margin: 170px auto 170px auto;
     }
 }
