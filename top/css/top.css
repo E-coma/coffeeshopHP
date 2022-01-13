@@ -630,6 +630,7 @@ html {
     .menubox {
         flex-direction: column-reverse;
         margin-top: 20px;
+        width: 100%;
     }
 
     .menubox:not(:last-child) {
@@ -640,6 +641,7 @@ html {
 
     .menu-textbox {
         padding-top: 30px;
+        width: 100%;
     }
 
     #text1 {
@@ -664,6 +666,9 @@ html {
         opacity: 2;
         transform: translateY(0);
         width: 100%;
+    }
+    #accesstext {
+        width: auto;
     }
     #access {
         width: auto;
