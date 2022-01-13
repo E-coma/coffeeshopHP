@@ -50,7 +50,7 @@ body {
     top: 3%;
     margin: 0 auto;
     width: 100%;
-    z-index: 99999;
+    z-index: 100;
     font-family: 'Mulish', sans-serif;
     font-weight: 600;
 }
@@ -284,6 +284,7 @@ article {
     font-family: '游ゴシック';
     font-size: 1.1rem;
     font-weight: bold;
+    z-index: 150;
 }
 #text1 {
     opacity: 0;
