@@ -6,6 +6,8 @@ $(".JS_VegasItem").vegas({ // スライドショーにしたい要素指定
     ]
 });
 
+
+  
 // 右固定のナビゲーション色変更タイミング
 let topimgHeight = document.getElementById("top-img").offsetHeight
 jQuery(window).on('scroll', function () {
@@ -77,5 +79,5 @@ $(window).on('scroll', function () {
     }
 });
 
-console.log(windowTop);
+// console.log(windowTop);
 // console.log(windowBottom)

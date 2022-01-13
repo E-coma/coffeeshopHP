@@ -1,13 +1,15 @@
 @charset "utf-8";
 
+
 html {
     font-size: 75%;
+    
 }
 
 body {
-    font-family: Calibri, Arial, sans-serif;
     color: #333333;
 }
+
 
 #main {
     max-width: 1980px;
@@ -49,6 +51,8 @@ body {
     margin: 0 auto;
     width: 100%;
     z-index: 99999;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
 }
 
 /* 左固定のロゴ */
@@ -77,7 +81,6 @@ body {
     right: 2%;
     color: #fff;
     font-size: 1.4rem;
-    font-weight: bold;
     z-index: 4;
 }
 
@@ -100,10 +103,12 @@ body {
 
 #header ul a.change-color {
     color: #333;
+    transition: all 0.65s;
 }
 
 #header li:hover {
     transform: translate(10px, 0);
+    color: #efba24;
 }
 
 /*スクロールダウン全体の場所*/
@@ -190,7 +195,8 @@ article {
     margin: 0;
     padding: 5px;
     border-bottom: 3px solid #333;
-    font-weight: bold;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700;
 }
 
 /* コンセプトのテキスト設定 */
@@ -274,15 +280,22 @@ article {
 
 .menu-textbox {
     width: 40%;
-    opacity: 0;
-    transition: 1s;
-    transform: translateY(50px);
     text-align: center;
     font-family: '游ゴシック';
     font-size: 1.1rem;
     font-weight: bold;
 }
+#text1 {
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(50px);
+}
 
+#text2 {
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(50px);
+}
 #text1.isUp {
     opacity: 2;
     transform: translateY(0);
@@ -297,6 +310,8 @@ article {
 
 
 #smallTitle {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
     font-size: 2rem;
     margin: 0% 0 10px 0;
     display: inline-block;
@@ -328,6 +343,8 @@ button {
 }
 
 .custom-btn {
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
     padding: 5px 53px;
     color: #fff;
     letter-spacing: 1px;
@@ -398,6 +415,8 @@ button {
     display: inline-block;
     border-bottom: 3px solid #fff!important;
     padding-top: 50px;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700;
 }
 
 #access-textbox {
@@ -424,6 +443,8 @@ button {
     margin: 1.5px 0;
     font-size: large;
     border-bottom: 1px solid #fff;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
 }
 
 iframe {
@@ -444,6 +465,9 @@ iframe {
     transform: translateY(0);
 }
 
+#accesstext span {
+    color: #efba24;
+}
 /* スケジュール */
 
 #schedule {
@@ -451,11 +475,12 @@ iframe {
     max-width: 1280px;
     margin: 170px auto 170px auto;
     text-align: center;
-    padding: 0 103px;
 }
 
 #schedule img {
     width: 100%;
+    max-width: 620px;
+    min-width: 270px;
 }
 
 #scheduleText {
@@ -480,7 +505,7 @@ html {
 
 @media screen and (max-width:780px) {
     html {
-        font-size: 86.2%;
+        font-size: 72%;
     }
 
     #header {
@@ -556,8 +581,11 @@ html {
 /* スマホ */
 @media screen and (max-width:520px) {
 
+    
+
     html {
         font-size: 72%;
+        
     }
 
     #pctitle {
@@ -612,11 +640,20 @@ html {
 
     .menu-textbox {
         padding-top: 30px;
+    }
+
+    #text1 {
         opacity: 0;
         transition: 1s;
         transform: translateY(50px);
     }
-
+    
+    #text2 {
+        opacity: 0;
+        transition: 1s;
+        transform: translateY(50px);
+    }
+    
     #text1.isUp {
         opacity: 2;
         transform: translateY(0);
