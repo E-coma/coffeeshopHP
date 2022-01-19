@@ -1,8 +1,8 @@
-$(".JS_VegasItem").vegas({ // スライドショーにしたい要素指定
+$(".myslide").vegas({ // スライドショーにしたい要素指定
     slides: [
-        { src: "common/img/top-img1.jpg" }, // 背景画像1枚目
-        { src: "common/img/top-img2.jpg" }, // 背景画像2枚目
-        { src: "common/img/top-img3.jpg" } // 背景画像3枚目
+        { src: "common/img/top-img1.jpg" },
+        { src: "common/img/top-img2.jpg" },
+        { src: "common/img/top-img3.jpg" }
     ]
 });
 
@@ -67,7 +67,7 @@ $(window).on('scroll', function () {
     }
 });
 
-// アクセステキスト
+// アクセステキスト表示タイミング
 
 $(window).on('scroll', function () {
     windowBottom = $(window).scrollTop() + $(window).height()
@@ -78,6 +78,3 @@ $(window).on('scroll', function () {
         $('#accesstext').removeClass('isUp');
     }
 });
-
-// console.log(windowTop);
-// console.log(windowBottom)
