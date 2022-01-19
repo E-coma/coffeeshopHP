@@ -470,6 +470,10 @@ iframe {
 #accesstext span {
     color: #efba24;
 }
+
+#scheduleText span {
+    color: #efba24;
+}
 /* スケジュール */
 
 #schedule {
