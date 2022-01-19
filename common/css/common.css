@@ -7,7 +7,7 @@ html {
 
 body {
     width: auto;
-    margin: 0;
+    margin: 0 auto;
     font-family: 'Mulish', sans-serif;
     color: #333333;
 }
@@ -16,13 +16,10 @@ body {
 
 /* フッター */
 footer {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
     background-color: #333333;
     padding: 36.5px 0;
     bottom: 0; 
-}
-
-footer img {
-    display: block;
-    margin: 0 auto;
+    text-align: center;
 }

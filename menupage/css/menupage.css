@@ -2,9 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap');
 
 body {
-    font-size: 16px;
+    font-family: 'Mulish', sans-serif;
+    color: #333333;
 }
-
+#header-all {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: 'Mulish', sans-serif;
+    color: #333333;
+}
 #menutopimg {
     max-width: 1100px;
     width: 100%;
@@ -16,10 +23,12 @@ body {
 }
 
 #header {
+    display: inline-block;
+    width: 100%;
+    max-width: 1100px;
     position: fixed;
     top: 3%;
     margin: 0 auto;
-    width: 100%;
     z-index: 100;
     font-family: 'Mulish', sans-serif;
     font-weight: 600;
@@ -59,9 +68,15 @@ body {
 }
 
 
+.ScrollTop.isActive {
+    z-index: 4;
+    opacity: 1;
+    transition: all 0.65s;
+}
 
 .ScrollTop {
     margin-left: 20px;
+    opacity: 0;
 }
 article {
     width: auto;
@@ -135,3 +150,4 @@ figcaption {
     width: 210px;
     height: auto;
 }
+

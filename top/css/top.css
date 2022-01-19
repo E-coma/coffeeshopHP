@@ -55,23 +55,6 @@ body {
     font-weight: 600;
 }
 
-/* 左固定のロゴ */
-
-.ScrollTop {
-    float: left;
-    top: 3%;
-    width: 50px;
-    z-index: 4;
-    opacity: 0;
-    padding: 10px;
-    margin: 10px;
-}
-
-.ScrollTop.isActive {
-    z-index: 4;
-    opacity: 1;
-    transition: all 0.65s;
-}
 
 
 /*スクロールダウン全体の場所*/
@@ -172,6 +155,24 @@ body {
 #header li:hover {
     transform: translate(10px, 0);
     color: #efba24;
+}
+
+/* 左固定のロゴ */
+
+.ScrollTop {
+    float: left;
+    top: 3%;
+    width: 50px;
+    z-index: 4;
+    opacity: 0;
+    padding: 10px;
+    margin: 10px;
+}
+
+.ScrollTop.isActive {
+    z-index: 4;
+    opacity: 1;
+    transition: all 0.65s;
 }
 
 /* ファーストビュー以下 */
