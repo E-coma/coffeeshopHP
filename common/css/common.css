@@ -102,11 +102,6 @@ footer {
 
     }
 
-    .headerbg {
-        background-color: #fff;
-        height: 70px;
-    }
-
     #hambicon {
         display: block;
         float: right;
@@ -159,10 +154,6 @@ footer {
 /* スマホレスポンシブ */
 @media screen and (max-width:520px) {
 
-    .headerbg {
-        background-color: #fff;
-        height: 60px;
-    }
     .hambset ul {
         font-size: 24px;
     }
