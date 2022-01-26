@@ -7,6 +7,7 @@ body {
 }
 
 #contacttopimg {
+    position: relative;
     width: 100%;
     margin: 0 auto;
 }
@@ -16,6 +17,14 @@ body {
     margin: 0 auto;
 }
 
+#contacttopinner {
+    position: absolute;
+    top: 34%;
+    left: 14%;
+    font-size: 1.5vw;
+    color: #fff;
+    text-shadow: 1.5px 1px 6px #333;
+}
 
 .ScrollTop.isActive {
     z-index: 4;
@@ -32,10 +41,4 @@ article {
     width: auto;
     max-width: 1280px;
     margin: 0 auto;
-}
-
-h1 {
-    display: inline-block;
-    padding: 15px 30%;
-    color: #333;
 }

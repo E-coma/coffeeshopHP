@@ -12,6 +12,7 @@ body {
 #menutopimg {
     width: 100%;
     margin: 0 auto;
+    position: relative;
 }
 
 #menutopimg img {
@@ -19,6 +20,14 @@ body {
     margin: 0 auto;
 }
 
+#menutopinner {
+    position: absolute;
+    top: 34%;
+    left: 20%;
+    font-size: 1.5vw;
+    color: #fff;
+    text-shadow: 1.5px 1px 6px #333;
+}
 
 .ScrollTop.isActive {
     z-index: 4;
@@ -37,11 +46,7 @@ article {
     margin: 0 auto;
 }
 
-h1 {
-    display: inline-block;
-    padding: 15px 30%;
-    color: #333;
-}
+
 
 h2 {
     display: inline-block;
@@ -49,6 +54,7 @@ h2 {
     border-bottom: 2px solid #333;
     margin: 40px 0;
     font-size: 2rem;
+    letter-spacing: 1px;
 }
 
 #coffeemenu {
@@ -69,7 +75,7 @@ h2 {
 #coffeemenu-fg img {
     width: 100%;
     height: auto;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 figure {
@@ -105,7 +111,7 @@ figcaption {
 #sandwichmenu-fg img {
     width: 100%;
     height: auto;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 #menusubtitle {
@@ -129,6 +135,10 @@ figcaption {
 }
 
 @media screen and (max-width:520px) {
+    #menutopinner {
+        left: 40%;
+        font-size: 0.7rem;
+    }
 
     #coffeemenu-fg {
         padding: 0;

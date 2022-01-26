@@ -3,11 +3,9 @@ jQuery(window).on('scroll', function () {
     if (contacttopimgHeight < jQuery(this).scrollTop()) {
         jQuery('#header ul a').addClass('change-color');
         jQuery('#hambicon img').attr('src','../common/img/hambblack@2x.png');
-        jQuery('#header').addClass('headerbg');
     } else {
         jQuery('#header ul a').removeClass('change-color');
         jQuery('#hambicon img').attr('src','../common/img/hambwhite@2x.png');
-        jQuery('#header').removeClass('headerbg');
     }
 });
 
@@ -33,4 +31,10 @@ $(window).on('scroll', function () {
     } else {
         $contactgetop.addClass('isActive');
     }
+});
+
+$(function(){
+    $('#header nav').on('click',function(){
+        $('#header').removeClass('hambset');
+    });
 });
