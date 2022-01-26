@@ -13,11 +13,11 @@ jQuery(window).on('scroll', function () {
 $(function(){
     $('#hambicon').on('click',function(){
         if($('#header').hasClass('hambset')){
-            $('#header').removeClass('hambset');
-            $('#hambicon img').attr('src','../common/img/hambwhite@2x.png')
+            $('#hambicon img').attr('src','../common/img/hambwhite@2x.png');
+            $('html').css('overflow','scroll');
         }else{
             $('#header').addClass('hambset');
-            $('#hambicon img').attr('src','../common/img/closewhiteimg@2x.png')
+            $('#hambicon img').attr('src','../common/img/closewhiteimg@2x.png');
         }
     });
 });
@@ -35,6 +35,12 @@ $(window).on('scroll', function () {
 
 $(function(){
     $('#header nav').on('click',function(){
+        $('#header').removeClass('hambset');
+    });
+});
+
+$(function(){
+    $('.ScrollTop img').on('click',function(){
         $('#header').removeClass('hambset');
     });
 });
