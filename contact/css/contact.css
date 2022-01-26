@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+body {
+    font-family: 'Mulish', sans-serif;
+    color: #333333;
+    font-size: 14px;
+}
+
+#contacttopimg {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#contacttopimg img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.ScrollTop.isActive {
+    z-index: 4;
+    opacity: 1;
+    transition: all 0.65s;
+}
+
+.ScrollTop {
+    margin-left: 20px;
+    opacity: 0;
+}
+
+article {
+    width: auto;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+h1 {
+    display: inline-block;
+    padding: 15px 30%;
+    color: #333;
+}

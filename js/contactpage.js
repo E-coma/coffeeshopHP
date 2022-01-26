@@ -1,13 +1,13 @@
-let menutopimgHeight = document.getElementById("menutopimg").offsetHeight
+let contacttopimgHeight = document.getElementById("contacttopimg").offsetHeight
 jQuery(window).on('scroll', function () {
-    if (menutopimgHeight < jQuery(this).scrollTop()) {
+    if (contacttopimgHeight < jQuery(this).scrollTop()) {
         jQuery('#header ul a').addClass('change-color');
         jQuery('#hambicon img').attr('src','../common/img/hambblack@2x.png');
         jQuery('#header').addClass('headerbg');
     } else {
         jQuery('#header ul a').removeClass('change-color');
         jQuery('#hambicon img').attr('src','../common/img/hambwhite@2x.png');
-        jQuery('#header').addClass('headerbg');
+        jQuery('#header').removeClass('headerbg');
     }
 });
 
@@ -25,12 +25,12 @@ $(function(){
 });
 
 
-let $menupagetop = $('.ScrollTop');
+let $contactpagetop = $('.ScrollTop');
 
 $(window).on('scroll', function () {
-    if ($(this).scrollTop() < menutopimgHeight) {
-        $menupagetop.removeClass('isActive');
+    if ($(this).scrollTop() < contacttopimgHeight) {
+        $contactpagetop.removeClass('isActive');
     } else {
-        $menupagetop.addClass('isActive');
+        $contactgetop.addClass('isActive');
     }
 });

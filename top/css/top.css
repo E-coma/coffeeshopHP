@@ -3,7 +3,7 @@
 
 html {
     font-size: 75%;
-    
+
 }
 
 body {
@@ -45,22 +45,14 @@ body {
 
 /* ヘッダー全体　上に固定 */
 
-#header {
-    position: fixed;
-    top: 3%;
-    margin: 0 auto;
-    width: 100%;
-    z-index: 100;
-    font-family: 'Mulish', sans-serif;
-    font-weight: 600;
-}
+
 
 
 
 /*スクロールダウン全体の場所*/
 .scrolldown {
     position: absolute;
-    z-index: 10000;
+    z-index: 997;
     bottom: 0;
     left: 52%;
 
@@ -119,61 +111,7 @@ body {
     background: #eee;
 }
 
-/* 右固定のナビゲーション */
 
-#header nav {
-    float: right;
-    top: 3%;
-    right: 2%;
-    color: #fff;
-    font-size: 1.4rem;
-    z-index: 4;
-}
-
-#header nav ul {
-    list-style-type: none;
-    text-align: left;
-    padding: 0;
-}
-
-#header nav li {
-    padding: 10px;
-    margin: 10px;
-    transition: all 0.5s;
-}
-
-#header ul a {
-    text-decoration: none;
-    color: #fff;
-}
-
-#header ul a.change-color {
-    color: #333;
-    transition: all 0.65s;
-}
-
-#header li:hover {
-    transform: translate(10px, 0);
-    color: #efba24;
-}
-
-/* 左固定のロゴ */
-
-.ScrollTop {
-    float: left;
-    top: 3%;
-    width: 50px;
-    z-index: 4;
-    opacity: 0;
-    padding: 10px;
-    margin: 10px;
-}
-
-.ScrollTop.isActive {
-    z-index: 4;
-    opacity: 1;
-    transition: all 0.65s;
-}
 
 /* ファーストビュー以下 */
 
@@ -286,8 +224,9 @@ article {
     font-family: '游ゴシック';
     font-size: 1.1rem;
     font-weight: bold;
-    z-index: 150;
+    z-index: 9999;
 }
+
 #text1 {
     opacity: 0;
     transition: 1s;
@@ -299,6 +238,7 @@ article {
     transition: 1s;
     transform: translateY(50px);
 }
+
 #text1.isUp {
     opacity: 2;
     transform: translateY(0);
@@ -415,7 +355,7 @@ button {
 
 #access-title {
     display: inline-block;
-    border-bottom: 3px solid #fff!important;
+    border-bottom: 3px solid #fff !important;
     padding-top: 50px;
     font-family: 'Mulish', sans-serif;
     font-weight: 700;
@@ -474,6 +414,7 @@ iframe {
 #scheduleText span {
     color: #efba24;
 }
+
 /* スケジュール */
 
 #schedule {
@@ -515,12 +456,13 @@ html {
         font-size: 72%;
     }
 
-    #header {
-        display: none;
-    }
 
     #concept {
         padding: 0;
+    }
+
+    .menu-textbox {
+        z-index: 150;
     }
 
     #accesstext {
@@ -579,7 +521,7 @@ html {
         padding: none;
         padding-left: 0;
         display: inline-block;
-        opacity: 2;
+        opacity: 1;
         transform: translateY(0);
         width: 100%;
     }
@@ -588,11 +530,11 @@ html {
 /* スマホ */
 @media screen and (max-width:520px) {
 
-    
+
 
     html {
         font-size: 72%;
-        
+
     }
 
     #pctitle {
@@ -616,13 +558,7 @@ html {
         transform: translate(3%, -36%);
     }
 
-    #header nav {
-        display: none;
-    }
 
-    .ScrollTop {
-        display: none;
-    }
 
 
     #smallTitle.tl-title {
@@ -656,27 +592,29 @@ html {
         transition: 1s;
         transform: translateY(50px);
     }
-    
+
     #text2 {
         opacity: 0;
         transition: 1s;
         transform: translateY(50px);
     }
-    
+
     #text1.isUp {
-        opacity: 2;
+        opacity: 1;
         transform: translateY(0);
         width: 100%;
     }
 
     #text2.isUp {
-        opacity: 2;
+        opacity: 1;
         transform: translateY(0);
         width: 100%;
     }
+
     #accesstext {
         width: auto;
     }
+
     #access {
         width: auto;
         color: #fff;
