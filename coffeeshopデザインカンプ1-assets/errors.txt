@@ -1,2 +1,0 @@
-[2022/1/8 2:01:49] layer "8:00～16:00 (L.O 15:30)": Expected end of input but "1" found.
-[2022/1/8 2:01:49] layer "coffeeandsandwich@coffee.com": Unsupported extension: com
