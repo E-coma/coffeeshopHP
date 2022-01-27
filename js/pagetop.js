@@ -9,8 +9,10 @@ $(".myslide").vegas({ // スライドショーにしたい要素指定
 
   
 // 右固定のナビゲーション色変更タイミング
+let keep = false
 let topimgHeight = document.getElementById("top-img").offsetHeight
 jQuery(window).on('scroll', function () {
+    if (!keep){
     if (topimgHeight < jQuery(this).scrollTop()) {
         jQuery('#header ul a').addClass('change-color');
         jQuery('#hambicon img').attr('src','common/img/hambblack@2x.png');
@@ -18,6 +20,7 @@ jQuery(window).on('scroll', function () {
         jQuery('#header ul a').removeClass('change-color');
         jQuery('#hambicon img').attr('src','common/img/hambwhite@2x.png');
     }
+}
 });
 
 
@@ -85,6 +88,7 @@ $(window).on('scroll', function () {
 // ハンバーガーメニュー
 $(function(){
     $('#hambicon').on('click',function(){
+        keep = !keep
         if($('#header').hasClass('hambset')){
             $('#header').removeClass('hambset');
             $('#hambicon img').attr('src','common/img/hambwhite@2x.png')
@@ -100,12 +104,14 @@ $(function(){
 
 $(function(){
     $('#header nav').on('click',function(){
+        keep = false
         $('#header').removeClass('hambset');
     });
 });
 
 $(function(){
     $('.ScrollTop img').on('click',function(){
+        keep = false
         $('#header').removeClass('hambset');
     });
 });

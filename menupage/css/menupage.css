@@ -47,7 +47,17 @@ article {
     margin: 0 auto;
 }
 
+#menucomment {
+    text-align: center;
+    font-family: '游ゴシック';
+    font-size: 0.9rem;
+    font-weight: bold;
 
+}
+
+#menucomment p {
+    margin: 75px
+}
 
 h2 {
     display: inline-block;
@@ -118,7 +128,7 @@ figcaption {
 #menusubtitle {
     display: block;
     margin: 5px 0;
-    font-size: 1rem;
+    font-size: 0.9rem;
     border-bottom: 1px dotted #efba24;
 }
 
@@ -140,6 +150,7 @@ figcaption {
     h2 {
         font-size: 1.5rem;
     }
+
     #menutopinner {
         left: 42%;
         font-size: 0.7rem;

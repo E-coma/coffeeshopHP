@@ -143,8 +143,10 @@ article {
 
 #text {
     font-family: '游ゴシック';
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: bold;
+    line-height: 30px;
+    letter-spacing: 1px;
 }
 
 #concept-text p:nth-child(3) {
@@ -559,7 +561,10 @@ html {
         transform: translate(3%, -36%);
     }
 
-
+    #text {
+        font-size: 1rem;
+        letter-spacing: 0px;
+    }
 
 
     #smallTitle.tl-title {
@@ -586,6 +591,7 @@ html {
     .menu-textbox {
         padding-top: 30px;
         width: 100%;
+        font-size: 1rem;
     }
 
     #text1 {
@@ -626,5 +632,6 @@ html {
         padding-bottom: 80px;
         margin: 0 auto;
         margin: 170px auto 170px auto;
+        font-size: 1rem;
     }
 }
