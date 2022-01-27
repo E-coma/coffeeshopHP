@@ -1,9 +1,11 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap');
 
 body {
     font-family: 'Mulish', sans-serif;
     color: #333333;
     font-size: 14px;
+    display: none;
 }
 
 #contacttopimg {
@@ -41,4 +43,157 @@ article {
     width: auto;
     max-width: 1280px;
     margin: 0 auto;
+}
+
+#formall {
+    max-width: 1600px;
+    padding: 0 150px;
+    text-align: center;
+    margin: 150px auto;
+    font-family: '游ゴシック';
+    font-size: 13px;
+    font-weight: bold;
+}
+
+#formin {
+    background-color: rgb(51 51 51 / 12%);
+    padding: 0 40px;
+    margin: 0 auto;
+}
+
+#formtitle {
+    padding: 30px;
+}
+
+#formtitle h2 {
+    margin-bottom: 0;
+}
+
+#formtitle p {
+    margin: 0;
+}
+
+#repuired {
+    background-color: #333;
+    color: #fff;
+    padding: 1px 3px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+#norepuired {
+    background-color: rgba(51, 51, 51, 0.521);
+    color: #fff;
+    padding: 1px 3px;
+    border-radius: 3px;
+    margin-right: 5px;
+}
+
+form div {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+form label {
+    width: 140px;
+    text-align: left;
+}
+
+form input, form textarea {
+    color: #333;
+    border: none;
+    background-color: #fff;
+    padding: 5px;
+    width: 380px;
+}
+
+form input {
+    height: 20px;
+}
+
+form textarea {
+    height: 300px;
+}
+
+form label[for="message"] {
+    align-self: start;
+}
+
+button {
+    width: 250px;
+    margin: 0 auto;
+    padding: 6px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    background-color: #333;
+    letter-spacing: 6px;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+form div:last-child {
+    padding-bottom: 40px;
+    margin-top: 40px;
+}
+
+
+@media screen and (max-width:780px) {
+
+
+    form div {
+        display: block;
+        display: flex;
+        flex-flow: column;
+        margin-top: 30px;
+        align-items: flex-start;
+    }
+
+    form label {
+        margin-bottom: 6px;
+    }
+
+    form input, form textarea {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #formall {
+        padding: 0 70px;
+    }
+}
+
+@media screen and (max-width:520px) {
+
+    #formall {
+        padding: 0px 55px;
+
+    }
+
+    #formin {
+        padding: 0 13px;
+    }
+
+    #contacttopinner {
+        left: 29%;
+        font-size: 0.7rem;
+    }
+    #formtitle p {
+        font-size: 10px;
+    }
+    form input, form textarea {
+        width: 95%;
+    }
+
+    form input {
+        height: 16px;
+    }
 }

@@ -5,6 +5,7 @@ body {
     font-family: 'Mulish', sans-serif;
     color: #333333;
     font-size: 14px;
+    display: none;
 }
 
 
@@ -135,6 +136,10 @@ figcaption {
 }
 
 @media screen and (max-width:520px) {
+
+    h2 {
+        font-size: 1.5rem;
+    }
     #menutopinner {
         left: 42%;
         font-size: 0.7rem;

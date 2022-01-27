@@ -1,3 +1,7 @@
+$(function() {
+	$('body').fadeIn(800); 
+});
+
 let menutopimgHeight = document.getElementById("menutopimg").offsetHeight
 jQuery(window).on('scroll', function () {
     if (menutopimgHeight < jQuery(this).scrollTop()) {
@@ -13,6 +17,7 @@ jQuery(window).on('scroll', function () {
 $(function(){
     $('#hambicon').on('click',function(){
         if($('#header').hasClass('hambset')){
+            $('#header').removeClass('hambset');
             $('#hambicon img').attr('src','../common/img/hambwhite@2x.png');
             $('html').css('overflow','scroll');
         }else{

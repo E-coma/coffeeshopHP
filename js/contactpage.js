@@ -1,3 +1,7 @@
+$(function() {
+	$('body').fadeIn(800); 
+});
+
 let contacttopimgHeight = document.getElementById("contacttopimg").offsetHeight
 jQuery(window).on('scroll', function () {
     if (contacttopimgHeight < jQuery(this).scrollTop()) {
@@ -29,7 +33,7 @@ $(window).on('scroll', function () {
     if ($(this).scrollTop() < contacttopimgHeight) {
         $contactpagetop.removeClass('isActive');
     } else {
-        $contactgetop.addClass('isActive');
+        $contactpagetop.addClass('isActive');
     }
 });
 

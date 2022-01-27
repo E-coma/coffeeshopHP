@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../common/css/common.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="../common/css/common.css">
+
     <title>contact us</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="../js/contactpage.js" defer></script>
 </head>
 <body>
     <div id="contacttopimg">
@@ -32,5 +36,37 @@
                     </ul>
                 </nav>
             </div>
+        <article id="formall">
+            <div id="formin">
+            <div id="formtitle">
+                <h2>CONTACT US</h2>
+                <p>お気軽にお問い合わせください。</p>
+            </div>
+            <form action="#" method="post">
+                <div>
+                <label for="name"><span id="repuired">必須</span>お名前</label>
+                <input type="text" name="username" id="name" placeholder="例:珈琲 太郎" required>
+            </div>
+            <div>
+                <label for="tel"><span id="norepuired">任意</span>お電話番号</label>
+                <input type="text" name="usertel" id="tel" placeholder="例:000-3333-XXXX">
+            </div>
+            <div>
+                <label for="address"><span id="repuired">必須</span>メールアドレス</label>
+                <input type="text" name="useraddress" id="address" required>
+            </div>
+            <div>
+                <label for="message"><span id="repuired">必須</span>メッセージ</label>
+                <textarea name="usermessage" id="message" placeholder="お問い合わせ内容をお気軽にご入力ください。" required></textarea>
+            </div>
+            <div>
+                <button type="submit">送信</button>
+            </div>
+            </form>
+        </div>
+        </article>
+        <footer>
+            <a href="#top"><img src="../common/img/footer-logo.png" width="104"></a>
+        </footer>
 </body>
 </html>
