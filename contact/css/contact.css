@@ -63,6 +63,8 @@ article {
 
 #formtitle {
     padding: 30px;
+    font-family: 'Mulish', sans-serif;
+    letter-spacing: 1px;
 }
 
 #formtitle h2 {

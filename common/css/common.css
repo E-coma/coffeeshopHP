@@ -90,11 +90,19 @@ footer {
     width: auto;
     max-width: 100%;
     background-color: #333333;
-    padding: 36.5px 0;
+    padding: 36.5px 0 5px 0;
     bottom: 0; 
     text-align: center;
 }
 
+small {
+    color: #fff;
+}
+
+small p {
+    margin-bottom: 5px;
+    margin-top: 36.5px;
+}
 
 /* タブレットレスポンシブ */
 @media screen and (max-width:780px) {
@@ -119,7 +127,7 @@ footer {
         right: 0;
         bottom: 0;
         z-index: 998;
-        background-color: rgb(153 153 153 / 91%);
+        background-color: rgba(153, 153, 153, 0.911);
         color: rgb(255, 255, 255);
         transition: 0.5s
     }
